@@ -1,0 +1,24 @@
+{
+  "name": "corridor-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Corridor: 100% Offline, Pure-TypeScript Autonomous Drone Airspace (UTM), 4D Conflict Resolution & Airspace Clearing Monorepo",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "tsc -b packages/domain-core packages/crypto-auth packages/event-bus packages/spatial-index packages/corridor-lock packages/ledger-engine apps/drone-fleet-simulator apps/telemetry-ingestor apps/spoof-detector apps/airspace-controller apps/flight-plan-saga apps/billing-settlement apps/control-plane-api",
+    "clean": "node -e \"const fs=require('fs'); for (const p of ['packages','apps']) { for (const d of fs.readdirSync(p)) fs.rmSync(p+'/'+d+'/dist',{recursive:true,force:true}); }\"",
+    "start:offline": "node apps/control-plane-api/dist/bootstrap.js",
+    "test": "node --test tests/e2e.test.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

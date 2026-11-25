@@ -1,0 +1,27 @@
+{
+  "name": "@corridor/control-plane-api",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@corridor/domain-core": "workspace:*",
+    "@corridor/crypto-auth": "workspace:*",
+    "@corridor/event-bus": "workspace:*",
+    "@corridor/spatial-index": "workspace:*",
+    "@corridor/corridor-lock": "workspace:*",
+    "@corridor/ledger-engine": "workspace:*",
+    "@corridor/drone-fleet-simulator": "workspace:*",
+    "@corridor/telemetry-ingestor": "workspace:*",
+    "@corridor/spoof-detector": "workspace:*",
+    "@corridor/airspace-controller": "workspace:*",
+    "@corridor/flight-plan-saga": "workspace:*",
+    "@corridor/billing-settlement": "workspace:*"
+  }
+}

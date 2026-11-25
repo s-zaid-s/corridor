@@ -1,0 +1,20 @@
+{
+  "name": "@corridor/airspace-controller",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@corridor/domain-core": "workspace:*",
+    "@corridor/crypto-auth": "workspace:*",
+    "@corridor/event-bus": "workspace:*",
+    "@corridor/spatial-index": "workspace:*",
+    "@corridor/corridor-lock": "workspace:*"
+  }
+}

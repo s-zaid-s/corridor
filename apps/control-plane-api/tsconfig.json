@@ -1,0 +1,48 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../../packages/domain-core"
+    },
+    {
+      "path": "../../packages/crypto-auth"
+    },
+    {
+      "path": "../../packages/event-bus"
+    },
+    {
+      "path": "../../packages/spatial-index"
+    },
+    {
+      "path": "../../packages/corridor-lock"
+    },
+    {
+      "path": "../../packages/ledger-engine"
+    },
+    {
+      "path": "../../apps/drone-fleet-simulator"
+    },
+    {
+      "path": "../../apps/telemetry-ingestor"
+    },
+    {
+      "path": "../../apps/spoof-detector"
+    },
+    {
+      "path": "../../apps/airspace-controller"
+    },
+    {
+      "path": "../../apps/flight-plan-saga"
+    },
+    {
+      "path": "../../apps/billing-settlement"
+    }
+  ]
+}
